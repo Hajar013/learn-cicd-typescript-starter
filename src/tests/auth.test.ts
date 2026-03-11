@@ -7,7 +7,7 @@ describe("getAPIKey", () => {
     const headers: IncomingHttpHeaders = {
       authorization: "ApiKey my-secret-key",
     };
-    expect(getAPIKey(headers)).toBe("wrong-key");
+expect(getAPIKey(headers)).toBe("my-secret-key");
 
   });
 
