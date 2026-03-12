@@ -31,5 +31,5 @@ jobs:
       - name: Set up gcloud
         uses: google-github-actions/setup-gcloud@v2
 
-      - name: Build and push Docker image
+      - name: gcloud builds submit
         run: gcloud builds submit --tag us-central1-docker.pkg.dev/ebms-e0fad/notely-ar-repo/notely:latest .
