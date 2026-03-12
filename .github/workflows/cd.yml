@@ -33,3 +33,6 @@ jobs:
 
       - name: gcloud builds submit
         run: gcloud builds submit --tag us-central1-docker.pkg.dev/ebms-e0fad/notely-ar-repo/notely:latest .
+
+      - name: Deploy to Cloud Run
+        run: gcloud run deploy notely --image us-central1-docker.pkg.dev/ebms-e0fad/notely-ar-repo/notely:latest --region us-central1 --allow-unauthenticated --project ebms-e0fad --max-instances=4
